@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Pico Labs Affiliate Program</title>
+    
+    <link rel="shortcut icon" type="image/png" href="pico-logo-transparent-48x48.png" />
+    <script src="https://manifold.picolabs.io:9090/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="https://manifold.picolabs.io/pico-engine.min.js" type="text/javascript"></script>
+    <script src="https://tswaters.github.io/fireworks/fireworks.min.js" type="text/javascript"></script>
+  </head>
+  <body style="background:linear-gradient(black,white);color:white">
+    <div style="float:left">
+    <a href="https://picolabs.io" title="Pico Labs at Brigham Young University creates Internet of Things technology that preserves personal freedom.">
+    <img src="https://picolabs.io/img/pico-labs-stacked.png" alt="Pico Labs logo">
+    </a>
+    </div>
+    <div id="container" style="height:378px">
+    <h1 style="color:#51b6e5">Pico Labs Affiliate Program</h1>
+    <h2 style="color:#51b6e5">self-service</h2>
+    </div>
+    <div style="background-color:white;color:black;height:100%;border-radius:5px">
+    <div id="login" style="display:none;padding:20px 10px">
+        <p>
+            We do not know who you are.
+            <span title="If you believe that we should know you, use your personal agent's links page">&#9432;</span>
+        </p>
+        <p>
+            To self-identify as a Pico Labs Affiliate, please fill out this form:
+            <span title="You may later change name and relationship as needed during our affiliation.">&#9432;</span>
+        </p>
+        <form id="self-identify" onsubmit="event.preventDefault();$('#invite').val(PLAPinvitation);$('#display-invite').toggle()">
+            <input type="text" name="name" placeholder="name" required>
+            <select name="relationship" required>
+                <option value="" selected disabled hidden>Select relationship</option>
+                <option value="o">Observer</option>
+                <option value="f">Friend</option>
+                <option value="s">Supporter</option>
+                <option value="e">Employee</option>
+            </select>
+            <button type="submit">Click here for DID exchange</button>
+            <span title="You will need a running personal agent">&#9432;</span>
+        </form>
+        <div id="display-invite" style="display:none">
+            Here's your invitation to join. Copy and paste into your <a href="https://github.com/b1conrad/browser-agent">personal agent</a>.
+            <input id="invite">
+            <button type="button" onclick="$('#invite').select();document.execCommand('copy')">Copy</button>
+            <button type="button" onclick="window.open($('#invite').val(),'invitation')">View</button>
+            <br>
+            Then come back here and <button id="refresh" type="button">refresh</button>.
+        </div>
+    </div>
+    <div id="logout" style="display:none;float:right;padding:10px">
+        <button onclick="if(confirm('Logging out is no longer necessary!\n\nNor are user names and passwords!!\n\nCelebrate?')){FW()};void 0">logout</button>
+    </div>
+    <div id="section" style="height:100vh;padding:20px 10px">
+        <span title="This shouldn't take longer than three seconds">Introspecting...</span>
+    </div>
+    <div id="links" style="padding:10px"><a href="about.html">about</a></div>
+    </div>
+    <script type="text/javascript">
+var FW = function() {
+  var container = document.getElementById('container')
+  var fireworks = new Fireworks(container)
+  var canvas = document.getElementsByTagName('canvas')[0]
+  if (canvas) {
+    canvas.style.position = "fixed"
+    canvas.style.top = "0"
+    canvas.style.left = "0"
+    fireworks.start()
+  }
+}
+    </script>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>

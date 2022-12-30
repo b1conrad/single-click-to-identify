@@ -10,3 +10,9 @@ See [browser-agent](https://github.com/b1conrad/browser-agent) for a local agent
 1. ACME Corp
 1. Trust Bank
 
+## credits
+Images are credited within the pages in which they appear.
+
+The idea of a person (usually named Alice) who makes connections
+with Faber College, ACME Corp, and Trust Bank, is not new.
+It is used by many proponents of Self-Sovereign Identity.

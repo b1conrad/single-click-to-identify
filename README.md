@@ -16,3 +16,6 @@ Images are credited within the pages in which they appear.
 The idea of a person (usually named Alice) who makes connections
 with Faber College, ACME Corp, and Trust Bank, is not new.
 It is used by many proponents of Self-Sovereign Identity.
+
+The idea came from session 11J of IIW XXIX 
+(see [reference 29](https://b1conrad.github.io/resume/#Ref29) from author's resume).

@@ -161,7 +161,7 @@ async function main(){
   if(children && children.length){
     agentECI = children[0].eci
   } else {
-    var agentLabel = prompt('Agent label')
+    var agentLabel = "ACME Corp."
     var directives = await pe.signalEvent({
       eci: rootECI,
       domain: "wrangler",

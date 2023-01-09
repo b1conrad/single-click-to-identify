@@ -169,7 +169,7 @@ async function main(){
   if(children && children.length){
     agentECI = children[0].eci
   } else {
-    var agentLabel = "PicoLabs AffiliateProgram"
+    var agentLabel = "PicoLabs Network"
     var directives = await pe.signalEvent({
       eci: rootECI,
       domain: "wrangler",
@@ -193,7 +193,7 @@ async function main(){
         attrs: {
             host: "https://manifold.picolabs.io:9090",
             eci: "XzRvVPRNxB3Si2aQ72UDa",
-            label: "PicoLabs AffiliateProgram Router",
+            label: "PicoLabs Network Router",
             rids: "org.sovrin.edge"
         }
       })
